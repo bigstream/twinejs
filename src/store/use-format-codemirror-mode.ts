@@ -37,10 +37,7 @@ export function useFormatCodeMirrorMode(
 		if (format.loadState === 'unloaded') {
 			dispatch(loadFormatProperties(format));
 		} else if (format.loadState === 'loaded') {
-			
-    
-    
-    		const twineVersion = packageInfo.version;
+			const twineVersion = packageInfo.version;
 			const editorExtensions = formatEditorExtensions(format, twineVersion);
 
 			if (editorExtensions?.codeMirror?.mode) {
