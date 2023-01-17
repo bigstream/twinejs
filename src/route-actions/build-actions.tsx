@@ -16,8 +16,9 @@ import {storyFileName} from '../electron/shared';
 import {Story} from '../store/stories';
 import {usePublishing} from '../store/use-publishing';
 import {useStoryLaunch} from '../store/use-story-launch';
-import {saveHtml, saveTwee} from '../util/save-file';
+import {saveHtml, saveTwee, saveIsms} from '../util/save-file';
 import {storyToTwee} from '../util/twee';
+import {storyToIsms} from '../util/isms';
 
 export interface BuildActionsProps {
 	story?: Story;
@@ -101,6 +102,14 @@ export const BuildActions: React.FC<BuildActionsProps> = ({story}) => {
 		}
 
 		saveTwee(storyToTwee(story), storyFileName(story, '.twee'));
+	}
+
+	function handleExportAsIsms() {
+		if (!story) {
+			throw new Error('No story provided to export');
+		}
+
+		saveIsms(storyToIsms(story), storyFileName(story, '.isms'));
 	}
 
 	return (
