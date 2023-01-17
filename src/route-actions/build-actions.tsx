@@ -196,6 +196,12 @@ export const BuildActions: React.FC<BuildActionsProps> = ({story}) => {
 				label={t('routeActions.build.exportAsTwee')}
 				onClick={handleExportAsTwee}
 			/>
+			<IconButton
+				disabled={!story}
+				icon={<IconFileTwee />}
+				label={t('routeActions.build.exportAsIsms')}
+				onClick={handleExportAsIsms}
+			/>
 		</ButtonBar>
 	);
 };

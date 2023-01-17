@@ -383,6 +383,7 @@
 		},
 		"build": {
 			"exportAsTwee": "Export As Twee",
+			"exportAsIsms": "Export As iSMS",
 			"play": "Play",
 			"proof": "Proof",
 			"publishToFile": "Publish to File",

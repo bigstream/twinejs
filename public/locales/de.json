@@ -384,6 +384,7 @@
 		},
 		"build": {
 			"exportAsTwee": "Exportiere als Twee",
+			"exportAsIsms": "Exportiere als iSMS",
 			"play": "Spiele",
 			"proof": "Korrektur",
 			"publishToFile": "Als Datei veröffentlichen",
